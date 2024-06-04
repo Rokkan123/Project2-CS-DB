@@ -7,6 +7,7 @@ import EditGunDetails from './page/EditGunDetails'
 import AllGunsPage from './page/AllGunsPage'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import AddGunPage from './page/AddGunPage'
 
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
       <Route path="/" element={<HomePage/>}/>
       <Route path="/weapons" element={<AllGunsPage/>}/>
       <Route path="/weapons/:weaponId" element={<GunDetails/>}/>
-      <Route path="/edit/:weaponid" element={<EditGunDetails/>}/>
+      <Route path="/weapons/:weaponId/edit" element={<EditGunDetails/>}/>
+      <Route path="/addweapon" element={<AddGunPage/>}/>
     </Routes>
       <Footer/>
       </div>
