@@ -34,7 +34,6 @@ function GunDetails() {
       {gun && (
         <>
           <img src={gun.image} alt="Gun Image" height="300px" width="auto" />
-
           <h3>{gun.name}</h3>
           <p>
             <b>Gun Price:</b> ${gun.price}
@@ -63,18 +62,14 @@ function GunDetails() {
           <p>
             <b>Team:</b> {gun.team}-side
           </p>
-          <p>
-            <div class="ratio ratio-16x9">
-              <iframe
-                src={gun.video}
-                title="Popular clip using"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              ></iframe>
-            </div>
-          </p>
 
+          <div class="ratio ratio-16x9">
+            <iframe
+              src={`https://www.youtube.com/embed/${gun.video}`}
+              title="Popular clip"
+              allowFullScreen
+            ></iframe>
+          </div>
           <button
             className="btn btn-primary"
             onClick={() => {

@@ -30,7 +30,7 @@ function AddGunPage() {
       );
 
       //   navigate("/weapons");
-      navigate("/");
+      navigate("/weapons");
       setNewGun({
         image: "",
         name: "",

@@ -1,33 +1,33 @@
-import React from 'react'
-import { useState, useEffect } from 'react';
-import axios from 'axios';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import React from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import { useParams, Link, useNavigate } from "react-router-dom";
 
-
-const API_URL = "https://counter-strike-weapon-api.adaptable.app/"
+const API_URL = "https://counter-strike-weapon-api.adaptable.app/";
 function EditGunDetails(props) {
-  const [gun, setGun] = useState({name:"",
-    image:"",
-    price:"",
-    damage:"",
-    description:"",
-    kill_reward:"",
-    rate_of_fire:"",
-    run_speed:"",
-    magazine_size:"",
-    max_ammo:"",
-    team:"",
-    video:"",
-  })
-  const {weaponId}= useParams()
-  const navigate= useNavigate()
+  const [gun, setGun] = useState({
+    name: "",
+    image: "",
+    price: "",
+    damage: "",
+    description: "",
+    kill_reward: "",
+    rate_of_fire: "",
+    run_speed: "",
+    magazine_size: "",
+    max_ammo: "",
+    team: "",
+    video: "",
+  });
+  const { weaponId } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const getWeaponToEdit = async () => {
       try {
         const response = await axios.get(`${API_URL}/weapons/${weaponId}`);
-        console.log(response,"gun array");
-       setGun(response.data)
+        console.log(response, "gun array");
+        setGun(response.data);
       } catch (error) {
         console.log(error);
       }
@@ -35,14 +35,11 @@ function EditGunDetails(props) {
     getWeaponToEdit();
   }, []);
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.put(`${API_URL}/weapons/${weaponId}`, 
-       gun
-      );
-      console.log(response,"plz work");
+      const response = await axios.put(`${API_URL}/weapons/${weaponId}`, gun);
+      console.log(response, "plz work");
       navigate("/weapons");
     } catch (error) {
       console.log(error);
@@ -63,8 +60,8 @@ function EditGunDetails(props) {
     }
   };
   const handleChange = (e) => {
-    setGun(prev => ({...prev, [e.target.name] : e.target.value}))
-  }
+    setGun((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
 
   return (
     <>
@@ -105,7 +102,7 @@ function EditGunDetails(props) {
             className="form-control mb-4"
             type="number"
             name="damage"
-            placeholder= "The damage"
+            placeholder="The damage"
             value={gun.damage}
             onChange={handleChange}
           />
@@ -131,15 +128,14 @@ function EditGunDetails(props) {
           />
 
           <label>Mag size</label>
-            <input
-              className="form-control mb-4"
-              type="number"
-              name="magazine_size"
-              placeholder="How big?"
-              value={gun.magazine_size}
-              onChange={handleChange}
-            />
-
+          <input
+            className="form-control mb-4"
+            type="number"
+            name="magazine_size"
+            placeholder="How big?"
+            value={gun.magazine_size}
+            onChange={handleChange}
+          />
 
           <label>Ammo in reserve</label>
           <input
@@ -151,7 +147,7 @@ function EditGunDetails(props) {
             onChange={handleChange}
           />
           <label>Used by which team</label>
-          <input
+          {/* <input
           
             className="form-control mb-4"
             type="text"
@@ -159,7 +155,20 @@ function EditGunDetails(props) {
             placeholder="Team"
             value={gun.team}
             onChange={handleChange}
-          />
+          /> */}
+          <select
+            className="form-select"
+            aria-label="Default select example"
+            name="team"
+            value={gun.team}
+            onChange={handleChange}
+          >
+            <option>Open this select menu</option>
+            <option>T</option>
+            <option>CT</option>
+            <option>Both</option>
+          </select>
+
           <label>Video link</label>
           <input
             className="form-control mb-4"
@@ -169,9 +178,10 @@ function EditGunDetails(props) {
             value={gun.video}
             onChange={handleChange}
           />
-     
-          
-          <button className="btn btn-primary btn-round">Edit Weapon Details</button>
+
+          <button className="btn btn-primary btn-round">
+            Edit Weapon Details
+          </button>
           <button
             onClick={() => handleDelete(gun, setGun.id)}
             type="button"
@@ -185,4 +195,4 @@ function EditGunDetails(props) {
   );
 }
 
-export default EditGunDetails
+export default EditGunDetails;
