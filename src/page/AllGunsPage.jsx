@@ -42,7 +42,10 @@ function AllGunsPage() {
                       {gun.name}
                     </h5>
                     <h6 className="card-subtitle mb-3 text-muted">
-                      <em>{gun.damage}</em>
+                      <em>{gun.description}</em>
+                    </h6>
+                    <h6 className="card-subtitle mb-3 text-muted">
+                      ${gun.price}
                     </h6>
                     {/* <p className="card-text">
                         Created by: {beer.contributed_by}

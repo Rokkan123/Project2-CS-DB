@@ -6,7 +6,7 @@ function HomePage() {
   return (
     <>
       <div>
-        <Link to="weapons">GO WEAPONS</Link>
+        <h1>this homepage is TRASH</h1>
       </div>
     </>
   );

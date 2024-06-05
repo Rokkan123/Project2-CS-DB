@@ -12,7 +12,7 @@ import AddGunPage from "./page/AddGunPage";
 function App() {
   return (
     <>
-      <div>
+      <div className="background">
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
