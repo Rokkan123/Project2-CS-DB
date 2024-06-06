@@ -2,3 +2,29 @@
   background-image: url("https://res.cloudinary.com/dw1igjvgi/image/upload/v1717619336/ef7cb44d312df5038cba0f69a0901da427900645_y01p4l.jpg");
   background-size: cover;
 }
+.nav{
+  background-color: black;
+}
+.fluid-container{
+  background-color: black;
+  text-decoration-color: white;
+}
+.butterfly{
+  position: absolute;
+  height: 125px;
+  width: auto;
+  right: 50px;
+  top: 240px;
+  rotate: -30deg;
+  overflow: hidden;
+  max-width: 100%;
+  max-height: 90%;
+}
+
+@media only screen and (min-width: 768px) {
+  .butterfly,
+  img[src*="https://csgostash.com/storage/img/skin_sideview/s114.png?id=f9dae18c8d69bfed6c7a"] {
+    display: block;
+  }
+}
+

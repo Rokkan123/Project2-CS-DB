@@ -55,20 +55,20 @@ function AddGunPage() {
 
   return (
     <>
-      <div className="d-inline-flex flex-column w-100 p-4">
+      <div className="d-inline-flex flex-column w-100 p-4 w-25 d-flex text-center">
         <form onSubmit={handleSubmit}>
-          <label>Name</label>
+          <label className="text-white text-uppercase">Name</label>
           <input
-            className="form-control mb-4"
+            className="form-control mb-4 w-25 d-flex mx-auto mx-auto opacity-75"
             type="text"
             name="name"
             placeholder="Gun Name"
             value={newGun.name}
             onChange={handleChange}
           />
-          <label>Image</label>
+          <label className="text-white">Image</label>
           <input
-            className="form-control mb-4"
+            className="form-control mb-4 w-25 d-flex mx-auto"
             type="text"
             name="image"
             placeholder="Image URL"
@@ -76,9 +76,9 @@ function AddGunPage() {
             onChange={handleChange}
           />
 
-          <label className="form-label">Description</label>
+          <label className="form-label text-white">Description</label>
           <textarea
-            className="form-control mb-4"
+            className="form-control mb-4 w-25 d-flex mx-auto"
             type="text"
             name="description"
             placeholder="Description"
@@ -87,9 +87,9 @@ function AddGunPage() {
             onChange={handleChange}
           ></textarea>
 
-          <label>Damage</label>
+          <label className="text-white">Damage</label>
           <input
-            className="form-control mb-4"
+            className="form-control mb-4 w-25 d-flex mx-auto"
             type="number"
             name="damage"
             placeholder="The damage"
@@ -97,9 +97,9 @@ function AddGunPage() {
             onChange={handleChange}
           />
 
-          <label>Kill Reward</label>
+          <label className="text-white">Kill Reward</label>
           <input
-            className="form-control mb-4"
+            className="form-control mb-4 w-25 d-flex mx-auto w-25 d-flex mx-auto"
             type="number"
             name="kill_reward"
             placeholder="Reward"
@@ -107,9 +107,9 @@ function AddGunPage() {
             onChange={handleChange}
           />
 
-          <label>Rounds per minute</label>
+          <label className="text-white">Rounds per minute</label>
           <input
-            className="form-control mb-4"
+            className="form-control mb-4 w-25 d-flex mx-auto"
             type="number"
             name="rate_of_fire"
             placeholder="Ex: 20, 30, 500"
@@ -117,9 +117,9 @@ function AddGunPage() {
             onChange={handleChange}
           />
 
-          <label>Mag size</label>
+          <label className="text-white">Mag size</label>
           <input
-            className="form-control mb-4"
+            className="form-control mb-4 w-25 d-flex mx-auto"
             type="number"
             name="magazine_size"
             placeholder="How big?"
@@ -127,18 +127,18 @@ function AddGunPage() {
             onChange={handleChange}
           />
 
-          <label>Ammo in reserve</label>
+          <label className="text-white">Ammo in reserve</label>
           <input
-            className="form-control mb-4"
+            className="form-control mb-4 w-25 d-flex mx-auto"
             type="number"
             name="max_ammo"
             placeholder="Ammo Reserve"
             value={newGun.max_ammo}
             onChange={handleChange}
           />
-          <label>Used by which team</label>
+          <label className="text-white">Used by which team</label>
           {/* <input
-            className="form-control mb-4"
+            className="form-control mb-4 w-25 d-flex mx-auto"
             type="text"
             name="team"
             placeholder="Team"
@@ -147,7 +147,7 @@ function AddGunPage() {
           /> */}
 
           <select
-            className="form-select"
+            className="form-select  w-25 d-flex mx-auto"
             aria-label="Default select example"
             name="team"
             value={newGun.team}
@@ -159,9 +159,9 @@ function AddGunPage() {
             <option>Both</option>
           </select>
 
-          <label>Video link</label>
+          <label className="text-white">Video link</label>
           <input
-            className="form-control mb-4"
+            className="form-control mb-4 w-25 d-flex mx-auto"
             type="text"
             name="video"
             placeholder="Link"
@@ -171,6 +171,15 @@ function AddGunPage() {
 
           <button className="btn btn-primary btn-round">Add New Weapon</button>
         </form>
+        <br></br>
+        <button
+          className="btn btn-primary btn-round w-15 mx-auto"
+          onClick={() => {
+            navigate(-1);
+          }}
+        >
+          Cancel
+        </button>
       </div>
     </>
   );

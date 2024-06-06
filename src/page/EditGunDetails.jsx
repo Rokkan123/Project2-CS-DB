@@ -65,20 +65,20 @@ function EditGunDetails(props) {
 
   return (
     <>
-      <div className="d-inline-flex flex-column w-100 p-4">
+      <div className="d-inline-flex flex-column w-100 p-4 d-flex text-center">
         <form onSubmit={handleSubmit}>
-          <label>Name</label>
+          <label className="text-white">Name</label>
           <input
-            className="form-control mb-4"
+            className="form-control mb-4 w-25 mx-auto"
             type="text"
             name="name"
             placeholder="Gun Name"
             value={gun.name}
             onChange={handleChange}
           />
-          <label>Image</label>
+          <label className="text-white">Image</label>
           <input
-            className="form-control mb-4"
+            className="form-control mb-4 w-25 mx-auto"
             type="text"
             name="image"
             placeholder="Image URL"
@@ -86,9 +86,9 @@ function EditGunDetails(props) {
             onChange={handleChange}
           />
 
-          <label className="form-label">Description</label>
+          <label className="form-label text-white">Description</label>
           <textarea
-            className="form-control mb-4"
+            className="form-control mb-4 w-25 mx-auto"
             type="text"
             name="description"
             placeholder="Description"
@@ -97,9 +97,9 @@ function EditGunDetails(props) {
             onChange={handleChange}
           ></textarea>
 
-          <label>Damage</label>
+          <label className="text-white">Damage</label>
           <input
-            className="form-control mb-4"
+            className="form-control mb-4 w-25 mx-auto"
             type="number"
             name="damage"
             placeholder="The damage"
@@ -107,9 +107,9 @@ function EditGunDetails(props) {
             onChange={handleChange}
           />
 
-          <label>Kill Reward</label>
+          <label className="text-white">Kill Reward</label>
           <input
-            className="form-control mb-4"
+            className="form-control mb-4 w-25 mx-auto"
             type="number"
             name="kill_reward"
             placeholder="Reward"
@@ -117,9 +117,9 @@ function EditGunDetails(props) {
             onChange={handleChange}
           />
 
-          <label>Rounds per minute</label>
+          <label className="text-white">Rounds per minute</label>
           <input
-            className="form-control mb-4"
+            className="form-control mb-4 w-25 mx-auto"
             type="number"
             name="rate_of_fire"
             placeholder="Ex: 20, 30, 500"
@@ -127,29 +127,29 @@ function EditGunDetails(props) {
             onChange={handleChange}
           />
 
-          <label>Mag size</label>
+          <label className="text-white">Mag size</label>
           <input
-            className="form-control mb-4"
+            className="form-control mb-4 w-25 mx-auto"
             type="number"
             name="magazine_size"
-            placeholder="How big?"
+            placeholder="How big is the Mag?"
             value={gun.magazine_size}
             onChange={handleChange}
           />
 
-          <label>Ammo in reserve</label>
+          <label className="text-white">Ammo in reserve</label>
           <input
-            className="form-control mb-4"
+            className="form-control mb-4 w-25 mx-auto"
             type="number"
             name="max_ammo"
             placeholder="Ammo Reserve"
             value={gun.max_ammo}
             onChange={handleChange}
           />
-          <label>Used by which team</label>
+          <label className="text-white">Used by which team</label>
           {/* <input
           
-            className="form-control mb-4"
+            className="form-control mb-4 w-25 mx-auto"
             type="text"
             name="team"
             placeholder="Team"
@@ -157,7 +157,7 @@ function EditGunDetails(props) {
             onChange={handleChange}
           /> */}
           <select
-            className="form-select"
+            className="form-select w-25 mx-auto"
             aria-label="Default select example"
             name="team"
             value={gun.team}
@@ -169,9 +169,9 @@ function EditGunDetails(props) {
             <option>Both</option>
           </select>
 
-          <label>Video link</label>
+          <label className="text-white">Video link</label>
           <input
-            className="form-control mb-4"
+            className="form-control mb-4 w-25 mx-auto"
             type="text"
             name="video"
             placeholder="Link"
@@ -185,11 +185,19 @@ function EditGunDetails(props) {
           <button
             onClick={() => handleDelete(gun, setGun.id)}
             type="button"
-            className="btn bg-danger-subtle m-2"
+            className="btn bg-danger m-2"
           >
             Delete
           </button>
         </form>
+        <button
+          className="btn btn-primary btn-round w-15 mx-auto"
+          onClick={() => {
+            navigate(-1);
+          }}
+        >
+          Cancel
+        </button>
       </div>
     </>
   );

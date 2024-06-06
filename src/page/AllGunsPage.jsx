@@ -22,7 +22,7 @@ function AllGunsPage() {
     fetchGuns();
   }, []);
   return (
-    <div className="d-inline-flex flex-wrap justify-content-center align-items-center w-100 p-4">
+    <div className="d-inline-flex flex-wrap justify-content-center align-items-center w-100 p-4 opacity-75">
       {guns &&
         guns.map((gun, i) => {
           return (
