@@ -10,7 +10,7 @@ function HomePage() {
     <>
       <div className="d-inline-flex flex-column justify-content-center align-items-center w-100 p-4">
         <h1 className="text-white">This homepage is TRASH</h1>
-        <p className="text-white">work my brother</p>
+        <i className="text-white">"Easy peeezy lemon squeeezy!"</i>
         <h2 className="text-white">CS2 weapon list</h2>
         <br></br>
         <p className="text-white">
@@ -19,7 +19,7 @@ function HomePage() {
         </p>
         <br></br>
         <ReactPlayer
-          url={"https://www.youtube.com/watch?v=B_u0g8_RjiU"}
+          url={"https://www.youtube.com/watch?v=4PZ5J-cJR1c"}
           controls={true}
         />
         <br></br>

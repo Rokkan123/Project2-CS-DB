@@ -20,11 +20,10 @@
   max-width: 100%;
   max-height: 90%;
 }
-
-@media only screen and (min-width: 768px) {
-  .butterfly,
-  img[src*="https://csgostash.com/storage/img/skin_sideview/s114.png?id=f9dae18c8d69bfed6c7a"] {
-    display: block;
-  }
+.navbutton{
+  background: rgba(227,136,22,255);
+}
+.orangefooter{
+  color:rgba(227,136,22,255) ;
 }
 

@@ -82,7 +82,7 @@ function GunDetails() {
             Back
           </button>
           <button
-            className="btn2 btn-primary2"
+            className="navbutton"
             onClick={() => {
               navigate(`/weapons/${weaponId}/edit`);
             }}

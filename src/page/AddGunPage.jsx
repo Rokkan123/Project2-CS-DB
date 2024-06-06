@@ -55,6 +55,13 @@ function AddGunPage() {
 
   return (
     <>
+      <div className="d-inline-flex flex-column w-100 p-4 w-25 d-flex text-center text-white">
+        <h2>Add Weapon</h2>
+        <i>
+          "Watch out. These boys have got a bit of an arsenal and they don't
+          mind using it!"
+        </i>
+      </div>
       <div className="d-inline-flex flex-column w-100 p-4 w-25 d-flex text-center">
         <form onSubmit={handleSubmit}>
           <label className="text-white text-uppercase">Name</label>

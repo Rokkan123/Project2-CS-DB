@@ -65,6 +65,9 @@ function EditGunDetails(props) {
 
   return (
     <>
+      <div className="d-inline-flex flex-column w-100 p-4 d-flex text-center text-white text-bold">
+        <h1>Edit Weapon</h1>
+      </div>
       <div className="d-inline-flex flex-column w-100 p-4 d-flex text-center">
         <form onSubmit={handleSubmit}>
           <label className="text-white">Name</label>

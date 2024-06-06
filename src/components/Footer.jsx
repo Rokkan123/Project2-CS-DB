@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <div>
-      <p>so you've have reached the bottom</p>
+      <p className="orangefooter">so you've have reached the bottom</p>
       <br></br>
       <span className="bg-primary"></span>
     </div>

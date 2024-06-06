@@ -8,6 +8,7 @@ import AllGunsPage from "./page/AllGunsPage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import AddGunPage from "./page/AddGunPage";
+import Errorpage from "./page/Errorpage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/weapons/:weaponId" element={<GunDetails />} />
           <Route path="/weapons/:weaponId/edit" element={<EditGunDetails />} />
           <Route path="/addweapon" element={<AddGunPage />} />
+          <Route path="/*" element={<Errorpage />} />
         </Routes>
         <Footer />
       </div>

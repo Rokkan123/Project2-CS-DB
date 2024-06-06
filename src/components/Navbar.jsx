@@ -6,13 +6,13 @@ function Navbar() {
     <nav className="navbar sticky-top navbar-expand-lg d-flex justify-content-center align-items-center">
       <div className="fluid-container">
         <Link to="/">
-          <button>Home</button>
+          <button className="navbutton">Home</button>
         </Link>
         <Link to="/weapons">
-          <button>All Weapons</button>
+          <button className="navbutton">All Weapons</button>
         </Link>
         <Link to="/addweapon">
-          <button>Add Weapon</button>
+          <button className="navbutton">Add Weapon</button>
         </Link>
       </div>
     </nav>
