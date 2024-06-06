@@ -7,6 +7,11 @@ function HomePage() {
     <>
       <div>
         <h1>this homepage is TRASH</h1>
+
+        {/* Header of the game
+        short explanation of what the data is about and about the game
+        Quick video that shows why people get a rush playing or watching this game. 
+        */}
       </div>
     </>
   );
